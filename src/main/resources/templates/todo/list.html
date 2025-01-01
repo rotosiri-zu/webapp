@@ -23,7 +23,7 @@
 				<td th:text="${todo.id}"></td>
 				<td th:text="${todo.todo}"></td>
 				<td>
-					<a th:href="@{/todos/{id}{id=${todo.id}}}">
+					<a th:href="@{/todos/{id}(id=${todo.id})}">
 						詳細
 					</a>
 				</td>

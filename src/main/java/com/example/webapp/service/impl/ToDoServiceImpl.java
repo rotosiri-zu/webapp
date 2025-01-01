@@ -35,7 +35,6 @@ public class ToDoServiceImpl implements ToDoService {
 	@Override
 	public void insertToDo(ToDo toDo) {
 		toDoMapper.insert(toDo);
-
 	}
 
 	@Override
