@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * すること:Form 
+ * すること : Form 
  */
 @Data
 @NoArgsConstructor
