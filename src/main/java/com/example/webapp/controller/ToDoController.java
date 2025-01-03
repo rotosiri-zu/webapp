@@ -79,7 +79,7 @@ public class ToDoController {
 		// フラッシュメッセージ
 		attributes.addFlashAttribute("message", "新しいToDoが作成されました");
 		// PRGパターン
-		return "redirect/todos";
+		return "redirect:/todos";
 	}
 	
 	/**
@@ -99,7 +99,7 @@ public class ToDoController {
 			// 対象データがない場合はフラッシュメッセージを設定
 			attributes.addFlashAttribute("errorMessage", "対象データがありません");
 			// 一覧画面へリダイレクト
-			return "redirect/todos";
+			return "redirect:/todos";
 		}
 	}
 	
@@ -115,6 +115,6 @@ public class ToDoController {
 		// フラッシュメッセージ
 		attributes.addFlashAttribute("errorMessage", "ToDoが更新されました");
 	// PRGパターン
-			return "redirect/todos";
+			return "redirect:/todos";
 	}
 }

@@ -32,6 +32,6 @@
 	<input th:if="${toDoForm.isNew}" type="submit" value="登録">
 	<input th:unless="${toDoForm.isNew}" type="submit" value="更新">
 	</form>
-	<a th:href="@{todos}">戻る</a>
+	<a th:href="@{/todos}">戻る</a>
 </body>
 </html>
