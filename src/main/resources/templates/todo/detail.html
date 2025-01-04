@@ -35,6 +35,9 @@
 		</tr>
 	</table>
 	<a th:href="@{/todos/edit/{id}(id=${todo.id})}">編集</a>
+	<from th:action="@{/todos/delete/{id}(id=${todo.id})}" method="post">
+		<input type="submit" value="削除">
+	</from>
 	<a th:href="@{/todos}">ToDo一覧へ</a>
 </body>
 
