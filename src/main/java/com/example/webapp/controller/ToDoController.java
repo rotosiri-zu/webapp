@@ -113,8 +113,20 @@ public class ToDoController {
 		// 更新処理
 		toDoService.updateToDo(ToDo);
 		// フラッシュメッセージ
-		attributes.addFlashAttribute("errorMessage", "ToDoが更新されました");
+		attributes.addFlashAttribute("Message", "ToDoが更新されました");
 	// PRGパターン
 			return "redirect:/todos";
+	}
+	/**
+	 * 指定されたIDの「すること」を削除します。
+	 */
+	@PostMapping("/delete/{id}")
+	public String delete(@PathVariable Integer id, Model model, RedirectAttributes attributes) {
+		// 削除処理
+		toDoService.deleteToDo(id);
+		// フラッシュメッセージ
+		attributes.addFlashAttribute("Message", "ToDoが削除されました");
+		// PRGパターン
+		return "redirect:/todos";
 	}
 }
