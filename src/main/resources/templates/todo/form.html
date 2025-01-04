@@ -30,7 +30,7 @@
 				<textarea rows="5" cols="30" th:field="*{detail}">
 				</textarea>
 				<!-- 詳細用 : バリエーションのエラー表示 -->
-				<span th:if="${#fields.hasErrors('detail')}" th:errors="*{todo}" style="color: red;">
+				<span th:if="${#fields.hasErrors('detail')}" th:errors="*{detail}" style="color: red;">
 					エラーがあれば表示
 				</span>
 			</td>

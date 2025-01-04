@@ -113,7 +113,7 @@ public class ToDoController {
 	}
 	
 	/**
-	 * 「すること」の情報を更新します。
+	 * 「すること」を更新します。
 	 */
 	@PostMapping("/update")
 	public String update(@Validated ToDoForm form, BindingResult bindingResult, RedirectAttributes attributes) {
