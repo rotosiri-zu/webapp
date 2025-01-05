@@ -7,5 +7,5 @@ public class LoginForm {
 	/** ユーザー名 */
 	private String usernameInput;
 	/** パスワード */
-	private String passwoidInput;
+	private String passwordInput;
 }
