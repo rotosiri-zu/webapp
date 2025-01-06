@@ -10,3 +10,5 @@ VALUES
 INSERT INTO todos (todo, detail, created_at, updated_at)
 VALUES
 ('ジムに行く', '運動する', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+-- 認証テーブルへのダミーデータの追加
+INSERT INTO authentications (username, password) VALUES ('admin', 'adminpass');
