@@ -24,6 +24,16 @@ public class SecurityConfig {
 			.formLogin(form -> form
 			// カスタムログインページのURLを指定
 			.loginPage("/login")
+			// ログイン処理のURLを指定
+			.loginProcessingUrl("/authentication")
+			// ユーザー名のname属性を指定
+			.usernameParameter("usernameInput")
+			// パスワードのname属性を指定
+			.passwordParameter("passwordInput")
+			// ログイン成功時のリダイレクト先を指定
+			.defaultSuccessUrl("/")
+			// ログイン失敗時のリダイレクト先を指定
+			.failureUrl("/login?error")
 				);
 		return http.build();
 	}
