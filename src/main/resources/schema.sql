@@ -1,5 +1,6 @@
 -- テーブルが存在したら削除する
 DROP TABLE IF EXISTS todos;
+DROP TABLE IF EXISTS authentications;
 
 -- テーブルの作成
 CREATE TABLE todos (
@@ -13,4 +14,11 @@ CREATE TABLE todos (
 	created_at timestamp without time zone,
 	-- updated_at(更新日)
 	updated_at timestamp without time zone
+);
+
+CREATE TABLE authentications (
+	-- ユーザー名 : 主キー
+	username VARCHAR(50) PRIMARY KEY,
+	-- パスワード
+	password VARCHAR(255) NOT NULL
 );
