@@ -7,22 +7,33 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import com.example.webapp.entity.Authentication;
 import com.example.webapp.entity.LoginUser;
+import com.example.webapp.repository.AuthenticationMapper;
+
+import lombok.RequiredArgsConstructor;
 
 /**
  * カスタム認証サービス
  */
 @Service
+@RequiredArgsConstructor
 public class LoginUserDatailsServiceImpl implements UserDetailsService {
+	/** DI */
+	private final AuthenticationMapper authenticationMapper;
+	
 	@Override
 	public UserDetails loadUserByUsername(String username)
 	throws UsernameNotFoundException {
-		// 「ユーザー名 : tarou」が入力されると、UserDetailsの実装クラスを返す
-		if (username.equals("tarou")) {
+		// 「認証テーブル」からデータを取得
+		Authentication authentication = authenticationMapper.selectByUsername(username);
+		
+		// 対象データがあれば、UserDetailsの実装クラスを返す
+		if (authentication != null) {
 			// 対象データが存在する
 			// UserDetailsの実装クラスを返す
-			return new LoginUser("tarou",
-													"pass",
+			return new LoginUser(authentication.getUsername(),
+									authentication.getPassword(),
 													Collections.emptyList());
 		} else {
 			// 対象データが存在しない
