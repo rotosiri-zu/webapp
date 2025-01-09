@@ -1,6 +1,7 @@
 -- テーブルが存在したら削除する
 DROP TABLE IF EXISTS todos;
 DROP TABLE IF EXISTS authentications;
+DROP TYPE IF EXISTS role;
 
 -- テーブルの作成
 CREATE TABLE todos (
@@ -16,9 +17,14 @@ CREATE TABLE todos (
 	updated_at timestamp without time zone
 );
 
+-- 権限用のENUM型
+CREATE TYPE role AS ENUM ('ADMIN', 'USER');
+
 CREATE TABLE authentications (
 	-- ユーザー名 : 主キー
 	username VARCHAR(50) PRIMARY KEY,
 	-- パスワード
-	password VARCHAR(255) NOT NULL
+	password VARCHAR(255) NOT NULL,
+	-- 権限
+	authority role NOT NULL
 );
