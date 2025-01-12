@@ -13,7 +13,7 @@ VALUES
 -- 認証テーブルへのダミーデータの追加
 -- password : adminpass
 INSERT INTO authentications (username, password, authority) VALUES ('admin', '$2a$10$mK64XCo4d5RtqjooiixnmOMfZtTVkSnk9ETIZrNTt2X3pLEl4oB4e
-', 'ADMIN');
+', 'ADMIN', '管理太郎');
 -- password : userpass
 INSERT INTO authentications (username, password, authority) VALUES ('user', '$2a$10$cI2vBVUz.zgoL0CJzHv6dedC.gFoGPuW4dwJ74IR6p.01c1kURkdC
-', 'USER');
+', 'USER', '一般花子');
