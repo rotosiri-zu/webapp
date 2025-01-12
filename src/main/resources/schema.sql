@@ -20,6 +20,7 @@ CREATE TABLE todos (
 -- 権限用のENUM型
 CREATE TYPE role AS ENUM ('ADMIN', 'USER');
 
+-- 認証情報を格納するテーブル
 CREATE TABLE authentications (
 	-- ユーザー名 : 主キー
 	username VARCHAR(50) PRIMARY KEY,
@@ -27,4 +28,6 @@ CREATE TABLE authentications (
 	password VARCHAR(255) NOT NULL,
 	-- 権限
 	authority role NOT NULL
+	-- 表示名
+	displayname VARCHAR(50) NOT NULL
 );
