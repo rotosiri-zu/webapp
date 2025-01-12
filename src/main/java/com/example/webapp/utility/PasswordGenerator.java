@@ -15,11 +15,5 @@ public class PasswordGenerator {
 		String encodedPassword = encoder.encode(rawPassword);
 		// 表示
 		System.out.println("ハッシュ化されたパスワード: " + encodedPassword);
-		// 入力値
-		String rawPassword1 = "userpass";
-		// パスワードをハッシュ化
-		String encodedPassword1 = encoder.encode(rawPassword1);
-		// 表示
-		System.out.println("ハッシュ化されたパスワード: " + encodedPassword1);
 	}
 }

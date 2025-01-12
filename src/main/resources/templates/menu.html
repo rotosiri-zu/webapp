@@ -10,7 +10,11 @@
 <body>
 	<h2>メニュー画面</h2>
 	<hr>
-	<a th:href="@{/todos}">ToDo一覧</a>
+	<a sec:authorize="hasAuthority('ADMIN')" th:href="@{/todos}">ToDo一覧</a>
+	<br>
+	<div sec:authorize="hasAutority('USER')">
+		【一般権限で表示される部分】
+	</div>
 	<div sec:authentication="name">
 		ログイン情報のname値に書き換わる
 	</div>

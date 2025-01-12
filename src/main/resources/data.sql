@@ -12,8 +12,8 @@ VALUES
 ('ジムに行く', '運動する', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 -- 認証テーブルへのダミーデータの追加
 -- password : adminpass
-INSERT INTO authentications (username, password, authority) VALUES ('admin', '$2a$10$XyTfwl1rdqqw9BDXNknsGuYPHJz3rQYBeWEFkyNzSYSz5zFrBWVzW
+INSERT INTO authentications (username, password, authority) VALUES ('admin', '$2a$10$mK64XCo4d5RtqjooiixnmOMfZtTVkSnk9ETIZrNTt2X3pLEl4oB4e
 ', 'ADMIN');
 -- password : userpass
-INSERT INTO authentications (username, password, authority) VALUES ('user', '$2a$10$nDTsdvjodMfFROdPuZgakOhuI97gTtTa.VYbZQCBT88ILsEKlLTjy
+INSERT INTO authentications (username, password, authority) VALUES ('user', '$2a$10$cI2vBVUz.zgoL0CJzHv6dedC.gFoGPuW4dwJ74IR6p.01c1kURkdC
 ', 'USER');
