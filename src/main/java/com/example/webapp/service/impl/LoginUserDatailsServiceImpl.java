@@ -38,7 +38,8 @@ public class LoginUserDatailsServiceImpl implements UserDetailsService {
 			// UserDetailsの実装クラスを返す
 			return new LoginUser(authentication.getUsername(),
 									authentication.getPassword(),
-									getAuthorityList(authentication.getAuthority())
+									getAuthorityList(authentication.getAuthority()),
+									authentication.getDisplayname()
 			);
 		} else {
 			// 対象データが存在しない
